@@ -141,7 +141,6 @@ class Ui_pestana_principal(object):
         QtCore.QMetaObject.connectSlotsByName(pestana_principal)
 
     def mostrar_operaciones_matrices(self):
-
             # Crear una instancia de la ventana de operaciones
         self.ventana_operaciones = QtWidgets.QMainWindow()
         self.operacion_matrices.setupUi(self.ventana_operaciones)

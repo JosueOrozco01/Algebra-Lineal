@@ -1,5 +1,8 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 from suma_matrices import Ui_SumaMatrices
+from resta_matrices import Ui_RestaMatrices
+from division_matrices import Ui_DivisionMatrices
+from multiplicacion_matrices import Ui_MultiplicacionMatrices
 
 
 class Ui_OperacionesMatrices(object):
@@ -7,6 +10,9 @@ class Ui_OperacionesMatrices(object):
         OperacionesMatrices.setObjectName("OperacionesMatrices")
         OperacionesMatrices.resize(573, 600)
         self.suma_matriz = Ui_SumaMatrices()
+        self.resta_matriz = Ui_RestaMatrices()
+        self.division_matriz = Ui_DivisionMatrices()
+        self.multiplicacion_matriz = Ui_MultiplicacionMatrices()
         self.centralwidget = QtWidgets.QWidget(parent=OperacionesMatrices)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton_8 = QtWidgets.QPushButton(parent=self.centralwidget)
@@ -90,6 +96,11 @@ class Ui_OperacionesMatrices(object):
 
         self.retranslateUi(OperacionesMatrices)
         QtCore.QMetaObject.connectSlotsByName(OperacionesMatrices)
+        self.pushButton_8.clicked.connect(self.mostrar_suma_matriz)
+        self.pushButton_9.clicked.connect(self.mostrar_resta_matriz)
+        self.pushButton_10.clicked.connect(self.mostrar_division_matriz)
+        self.pushButton_11.clicked.connect(self.mostrar_multiplicacion_matriz)
+
 
     def retranslateUi(self, OperacionesMatrices):
         _translate = QtCore.QCoreApplication.translate
@@ -104,6 +115,24 @@ class Ui_OperacionesMatrices(object):
         self.ventana_suma = QtWidgets.QMainWindow()
         self.suma_matriz.setupUi(self.ventana_suma)
         self.ventana_suma.show()
+
+    def mostrar_resta_matriz(self):
+        # Crear una instancia de la ventana de operaciones con vectores
+        self.ventana_resta = QtWidgets.QMainWindow()
+        self.resta_matriz.setupUi(self.ventana_resta)
+        self.ventana_resta.show()
+
+    def mostrar_division_matriz(self):
+        # Crear una instancia de la ventana de operaciones con vectores
+        self.ventana_division = QtWidgets.QMainWindow()
+        self.division_matriz.setupUi(self.ventana_division)
+        self.ventana_division.show()
+
+    def mostrar_multiplicacion_matriz(self):
+        # Crear una instancia de la ventana de operaciones con vectores
+        self.ventana_multiplcacion = QtWidgets.QMainWindow()
+        self.multiplicacion_matriz.setupUi(self.ventana_multiplcacion)
+        self.ventana_multiplcacion.show()
 
 if __name__ == "__main__":
     import sys
