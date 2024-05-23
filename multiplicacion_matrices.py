@@ -5,6 +5,7 @@ class Ui_MultiplicacionMatrices(object):
     def setupUi(self, MultiplicacionMatrices):
         MultiplicacionMatrices.setObjectName("MultiplicacionMatrices")
         MultiplicacionMatrices.resize(810, 958)
+        MultiplicacionMatrices.setFixedSize(810, 958)
         self.centralwidget = QtWidgets.QWidget(parent=MultiplicacionMatrices)
         self.centralwidget.setObjectName("centralwidget")
 

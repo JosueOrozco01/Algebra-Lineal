@@ -9,6 +9,7 @@ class Ui_OperacionesMatrices(object):
     def setupUi(self, OperacionesMatrices):
         OperacionesMatrices.setObjectName("OperacionesMatrices")
         OperacionesMatrices.resize(573, 600)
+        OperacionesMatrices.setFixedSize(573, 600)
         self.suma_matriz = Ui_SumaMatrices()
         self.resta_matriz = Ui_RestaMatrices()
         self.division_matriz = Ui_DivisionMatrices()

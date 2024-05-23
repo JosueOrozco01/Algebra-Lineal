@@ -5,6 +5,7 @@ class Ui_operaciones_vectores(object):
     def setupUi(self, operaciones_vectores):
         operaciones_vectores.setObjectName("operaciones_vectores")
         operaciones_vectores.resize(532, 600)
+        operaciones_vectores.setFixedSize(532, 600)
         self.centralwidget = QtWidgets.QWidget(parent=operaciones_vectores)
         self.centralwidget.setObjectName("centralwidget")
         self.label_10 = QtWidgets.QLabel(parent=self.centralwidget)

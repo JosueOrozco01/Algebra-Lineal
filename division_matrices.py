@@ -5,6 +5,7 @@ class Ui_DivisionMatrices(object):
     def setupUi(self, DivisionMatrices):
         DivisionMatrices.setObjectName("DivisionMatrices")
         DivisionMatrices.resize(810, 958)
+        DivisionMatrices.setFixedSize(810, 958)
         self.centralwidget = QtWidgets.QWidget(parent=DivisionMatrices)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)

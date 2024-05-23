@@ -5,6 +5,7 @@ class Ui_RestaMatrices(object):
     def setupUi(self, RestaMatrices):
         RestaMatrices.setObjectName("RestaMatrices")
         RestaMatrices.resize(810, 958)
+        RestaMatrices.setFixedSize(810, 958)
         self.centralwidget = QtWidgets.QWidget(RestaMatrices)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)

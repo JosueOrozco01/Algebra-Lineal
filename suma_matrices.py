@@ -5,6 +5,7 @@ class Ui_SumaMatrices(object):
     def setupUi(self, SumaMatrices):
         SumaMatrices.setObjectName("SumaMatrices")
         SumaMatrices.resize(810, 958)
+        SumaMatrices.setFixedSize(810, 958)
 
         self.centralwidget = QtWidgets.QWidget(parent=SumaMatrices)
         self.centralwidget.setObjectName("centralwidget")
@@ -321,6 +322,7 @@ def addition(matriz1, matriz2):
             suma = matriz1.get_elemento(i, j) + matriz2.get_elemento(i, j)
             resultado.set_elemento(i, j, suma)
     return resultado
+
 
 if __name__ == "__main__":
     import sys
