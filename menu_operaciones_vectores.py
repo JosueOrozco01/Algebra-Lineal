@@ -1,4 +1,7 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
+from suma_vectores import Ui_SumaVectores
+from producto_cruz import Ui_ProductoCruz
+from producto_punto import Ui_ProductoPunto
 
 
 class Ui_operaciones_vectores(object):
@@ -6,6 +9,9 @@ class Ui_operaciones_vectores(object):
         operaciones_vectores.setObjectName("operaciones_vectores")
         operaciones_vectores.resize(532, 600)
         operaciones_vectores.setFixedSize(532, 600)
+        self.Suma_vectores = Ui_SumaVectores()
+        self.producto_punto = Ui_ProductoPunto()
+        self.producto_cruz = Ui_ProductoCruz()
         self.centralwidget = QtWidgets.QWidget(parent=operaciones_vectores)
         self.centralwidget.setObjectName("centralwidget")
         self.label_10 = QtWidgets.QLabel(parent=self.centralwidget)
@@ -76,6 +82,10 @@ class Ui_operaciones_vectores(object):
         self.retranslateUi(operaciones_vectores)
         QtCore.QMetaObject.connectSlotsByName(operaciones_vectores)
 
+        self.pushButton_8.clicked.connect(self.mostrar_suma_vectoras)
+        self.pushButton_9.clicked.connect(self.mostrar_producto_punto)
+        self.pushButton_10.clicked.connect(self.mostrar_producto_cruz)
+
     def retranslateUi(self, operaciones_vectores):
         _translate = QtCore.QCoreApplication.translate
         operaciones_vectores.setWindowTitle(_translate("operaciones_vectores", "Operaciones con Vectores"))
@@ -83,6 +93,20 @@ class Ui_operaciones_vectores(object):
         self.pushButton_9.setText(_translate("operaciones_vectores", " Producto Punto de Vectores"))
         self.pushButton_10.setText(_translate("operaciones_vectores", " Producto Cruz de Vectores"))
 
+    def mostrar_suma_vectoras(self):
+        self.ventana_suma_vectores = QtWidgets.QMainWindow()
+        self.Suma_vectores.setupUi(self.ventana_suma_vectores)
+        self.ventana_suma_vectores.show()
+
+    def mostrar_producto_punto(self):
+        self.ventana_producto_punto = QtWidgets.QMainWindow()
+        self.producto_punto.setupUi(self.ventana_producto_punto)
+        self.ventana_producto_punto.show()
+
+    def mostrar_producto_cruz(self):
+        self.ventana_producto_cruz = QtWidgets.QMainWindow()
+        self.producto_cruz.setupUi(self.ventana_producto_cruz)
+        self.ventana_producto_cruz.show()
 
 if __name__ == "__main__":
     import sys
